@@ -1,0 +1,12 @@
+streamlit
+streamlit-autorefresh
+pandas
+numpy
+plotly
+requests
+python-dotenv
+google-generativeai
+folium
+streamlit-folium
+Pillow
+reportlab

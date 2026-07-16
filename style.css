@@ -1,0 +1,1179 @@
+/* ==========================================================
+   AI SMART CITY DASHBOARD
+   STYLE.CSS
+   PART 3A
+========================================================== */
+
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+html,
+body{
+
+    background:#08111f;
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+}
+
+/* ===========================
+   STREAMLIT APP
+=========================== */
+
+.stApp{
+
+    background:#08111f;
+
+    color:#f8fafc;
+
+    min-height:100vh;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+section[data-testid="stSidebar"]{
+
+    background:rgba(10,18,35,.88);
+
+    backdrop-filter:blur(18px);
+
+    border-right:1px solid rgba(255,255,255,.08);
+}
+
+section[data-testid="stSidebar"]{
+    display:block !important;
+    visibility:visible !important;
+    transform:none !important;
+    width:320px !important;
+}
+
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3,
+section[data-testid="stSidebar"] label{
+
+    color:white;
+}
+
+
+/* ===========================
+   TITLE BOX
+=========================== */
+
+.title-box{
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
+
+    padding:30px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+.title-box h1{
+
+    font-size:40px;
+
+    font-weight:700;
+
+    color:white;
+
+    margin-bottom:10px;
+}
+
+.title-box p{
+
+    color:#eef6ff;
+
+    font-size:17px;
+
+    font-weight:400;
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+.section-title{
+
+    margin-top:20px;
+
+    margin-bottom:15px;
+}
+
+.section-title h2{
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    border-left:6px solid #06b6d4;
+
+    padding-left:15px;
+}
+
+/* ===========================
+   INFO CARD
+=========================== */
+
+.info-card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    margin-bottom:20px;
+
+    color:white;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+    transition:.35s;
+}
+
+.info-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 40px rgba(37,99,235,.35);
+}
+
+.info-card h2{
+
+    font-size:30px;
+
+    margin-top:10px;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+}
+
+.info-card h3{
+
+    font-size:22px;
+
+    font-weight:600;
+}
+
+.info-card h4{
+
+    color:#8ecbff;
+
+    font-size:16px;
+
+    font-weight:600;
+}
+
+.info-card p{
+
+    color:#d6d6d6;
+
+    font-size:15px;
+
+    line-height:1.7;
+}
+
+/* ===========================
+   METRIC
+=========================== */
+
+div[data-testid="metric-container"]{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:15px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    transition:.30s;
+}
+
+div[data-testid="metric-container"]:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(6,182,212,.25);
+}
+
+/* ===========================
+   HR
+=========================== */
+
+hr{
+
+    border:none;
+
+    height:1px;
+
+    background:rgba(255,255,255,.12);
+
+    margin:25px 0;
+}
+
+/* ==========================================================
+   PART 3B
+   CHARTS • TABLES • BUTTONS • INPUTS
+========================================================== */
+
+/* ===========================
+   GLASS CARD
+=========================== */
+
+.glass-card{
+
+    background:rgba(255,255,255,.14);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.16);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.30);
+
+    transition:.35s;
+}
+
+.glass-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 45px rgba(37,99,235,.30);
+}
+
+/* ===========================
+   PLOTLY CHART
+=========================== */
+
+.js-plotly-plot{
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:20px;
+
+    padding:10px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+/* ===========================
+   DATAFRAME
+=========================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+th{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:12px;
+
+    text-align:left;
+}
+
+td{
+
+    padding:12px;
+
+    border-bottom:1px solid rgba(255,255,255,.10);
+
+    color:#f1f5f9;
+}
+
+tr:hover{
+
+    background:rgba(255,255,255,.05);
+}
+
+/* ===========================
+   PROGRESS BAR
+=========================== */
+
+.stProgress{
+
+    margin-bottom:18px;
+}
+
+.stProgress > div > div{
+
+    border-radius:20px;
+
+    overflow:hidden;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.stButton>button{
+
+    width:100%;
+
+    border-radius:14px;
+
+    border:none;
+
+    padding:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
+
+    color:white;
+
+    transition:.35s;
+}
+
+.stButton>button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(37,99,235,.35);
+}
+
+/* ===========================
+   SELECTBOX
+=========================== */
+
+div[data-baseweb="select"]{
+
+    border-radius:12px;
+}
+
+/* ===========================
+   SLIDER
+=========================== */
+
+.stSlider{
+
+    padding-top:5px;
+
+    padding-bottom:10px;
+}
+
+/* ===========================
+   INPUT LABEL
+=========================== */
+
+label{
+
+    font-weight:600;
+
+    color:white;
+}
+
+/* ===========================
+   SUCCESS
+=========================== */
+
+.stSuccess{
+
+    border-radius:15px;
+}
+
+/* ===========================
+   WARNING
+=========================== */
+
+.stAlert{
+
+    border-radius:15px;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08111f;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#06b6d4;
+}
+
+/* ==========================================================
+   PART 3C
+   FOOTER • ANIMATIONS • RESPONSIVE
+========================================================== */
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+
+    margin-top:40px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.footer h3{
+
+    color:#06b6d4;
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+}
+
+.footer p{
+
+    color:#d9d9d9;
+
+    margin-top:8px;
+
+    font-size:15px;
+}
+
+
+/* ===========================
+   CARD ANIMATION
+=========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.info-card{
+
+    animation:fadeUp .6s ease;
+}
+
+.glass-card{
+
+    animation:fadeUp .8s ease;
+}
+
+
+/* ===========================
+   GLOW EFFECT
+=========================== */
+
+.info-card:hover{
+
+    border:1px solid rgba(6,182,212,.35);
+
+    box-shadow:
+        0 0 15px rgba(6,182,212,.20),
+        0 15px 35px rgba(0,0,0,.30);
+}
+
+.glass-card:hover{
+
+    border:1px solid rgba(37,99,235,.40);
+
+    box-shadow:
+        0 0 20px rgba(37,99,235,.25),
+        0 20px 40px rgba(0,0,0,.35);
+}
+
+
+/* ===========================
+   TITLE ANIMATION
+=========================== */
+
+.title-box{
+
+    animation:fadeUp .7s ease;
+}
+
+
+/* ===========================
+   IMAGE
+=========================== */
+
+img{
+
+    border-radius:15px;
+}
+
+
+/* ===========================
+   METRIC VALUE
+=========================== */
+
+div[data-testid="metric-container"] label{
+
+    color:#9cc8ff !important;
+}
+
+div[data-testid="metric-container"]{
+
+    overflow:hidden;
+}
+
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+
+    color:#06b6d4;
+
+    text-decoration:none;
+}
+
+a:hover{
+
+    color:#60a5fa;
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media screen and (max-width:992px){
+
+    .title-box h1{
+
+        font-size:30px;
+    }
+
+    .title-box p{
+
+        font-size:15px;
+    }
+
+    .info-card{
+
+        padding:18px;
+    }
+
+    .info-card h2{
+
+        font-size:24px;
+    }
+
+}
+
+
+@media screen and (max-width:768px){
+
+    .title-box{
+
+        padding:20px;
+    }
+
+    .title-box h1{
+
+        font-size:24px;
+    }
+
+    .title-box p{
+
+        font-size:14px;
+    }
+
+    .info-card{
+
+        margin-bottom:15px;
+    }
+
+    .glass-card{
+
+        padding:18px;
+    }
+
+}
+
+
+@media screen and (max-width:480px){
+
+    .title-box h1{
+
+        font-size:20px;
+    }
+
+    .title-box p{
+
+        font-size:13px;
+    }
+
+    .footer h3{
+
+        font-size:22px;
+    }
+
+    .footer p{
+
+        font-size:13px;
+    }
+
+}
+
+
+/* ===========================
+   HIDE STREAMLIT DEFAULT
+=========================== */
+
+#MainMenu{
+
+    visibility:hidden;
+}
+
+footer{
+
+    visibility:hidden;
+}
+
+header{
+
+    visibility:hidden;
+}
+
+
+/* ===========================
+   END
+=========================== */
+
+/* ==========================================================
+   PART 3D
+   FINAL PREMIUM POLISH
+========================================================== */
+
+/* ===========================
+   CARD BORDER ANIMATION
+=========================== */
+
+.info-card,
+.glass-card,
+div[data-testid="metric-container"]{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.info-card::before,
+.glass-card::before,
+div[data-testid="metric-container"]::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:70%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent
+    );
+
+    transition:.8s;
+}
+
+.info-card:hover::before,
+.glass-card:hover::before,
+div[data-testid="metric-container"]:hover::before{
+
+    left:150%;
+}
+
+
+/* ===========================
+   TITLE GRADIENT
+=========================== */
+
+.title-box h1{
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+.title-box p{
+
+    opacity:.95;
+}
+
+
+/* ===========================
+   METRIC VALUE
+=========================== */
+
+div[data-testid="metric-container"] [data-testid="stMetricValue"]{
+
+    color:#ffffff !important;
+
+    font-size:30px !important;
+
+    font-weight:700 !important;
+}
+
+div[data-testid="metric-container"] [data-testid="stMetricLabel"]{
+
+    font-size:15px !important;
+
+    font-weight:600 !important;
+}
+
+
+/* ===========================
+   PLOTLY
+=========================== */
+
+.js-plotly-plot{
+
+    border-radius:20px;
+
+    transition:.35s;
+}
+
+.js-plotly-plot:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(6,182,212,.20);
+}
+
+
+/* ===========================
+   SUCCESS / INFO / WARNING
+=========================== */
+
+.stAlert{
+
+    border-radius:15px;
+
+    border:none;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.20);
+}
+
+
+/* ===========================
+   SLIDER VALUE
+=========================== */
+
+.stSlider{
+
+    margin-bottom:15px;
+}
+
+
+/* ===========================
+   SELECTBOX
+=========================== */
+
+div[data-baseweb="select"]{
+
+    transition:.30s;
+}
+
+div[data-baseweb="select"]:hover{
+
+    transform:scale(1.01);
+}
+
+
+/* ===========================
+   COLUMN GAP
+=========================== */
+
+div[data-testid="column"]{
+
+    padding:5px;
+}
+
+
+/* ===========================
+   IMAGE
+=========================== */
+
+img{
+
+    transition:.35s;
+}
+
+img:hover{
+
+    transform:scale(1.03);
+}
+
+
+/* ===========================
+   LOADING SPINNER
+=========================== */
+
+.stSpinner{
+
+    color:#06b6d4;
+}
+
+
+/* ===========================
+   APP FADE
+=========================== */
+
+.stApp{
+
+    animation:fadeUp .6s ease;
+}
+
+
+/* ===========================
+   PREMIUM BACKGROUND OVERLAY
+=========================== */
+
+.stApp::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+        radial-gradient(circle at top right,
+        rgba(37,99,235,.08),
+        transparent 35%),
+
+        radial-gradient(circle at bottom left,
+        rgba(6,182,212,.08),
+        transparent 35%);
+}
+
+
+/* ===========================
+   FINAL
+=========================== */
+
+/* PREMIUM KPI CARD */
+
+.premium-card{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border-radius:20px;
+
+padding:18px;
+
+height:180px;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.premium-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 40px rgba(37,99,235,.35);
+
+}
+
+.card-title{
+
+font-size:15px;
+
+color:#cbd5e1;
+
+}
+
+.card-icon{
+
+font-size:42px;
+
+margin-top:8px;
+
+}
+
+.card-value{
+
+font-size:38px;
+
+font-weight:700;
+
+margin-top:5px;
+
+color:white;
+
+}
+
+.card-status{
+
+margin-top:10px;
+
+font-size:16px;
+
+color:#38bdf8;
+
+font-weight:600;
+
+}
+
+.red{
+
+background:linear-gradient(135deg,#661111,#9f1239);
+
+}
+
+.orange{
+
+background:linear-gradient(135deg,#78350f,#b45309);
+
+}
+
+.blue{
+
+background:linear-gradient(135deg,#1d4ed8,#2563eb);
+
+}
+
+.green{
+
+background:linear-gradient(135deg,#14532d,#15803d);
+
+}
+
+/* ===========================
+NAVBAR
+=========================== */
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 25px;
+
+margin-bottom:25px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border-radius:18px;
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.nav-left{
+
+font-size:24px;
+
+font-weight:700;
+
+color:white;
+
+}
+
+.nav-center{
+
+font-size:18px;
+
+font-weight:600;
+
+color:#38bdf8;
+
+}
+
+.nav-right{
+
+font-size:15px;
+
+color:#d1d5db;
+
+}
+
+/* =====================================
+   PREMIUM NAVBAR
+===================================== */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 30px;
+
+    margin-bottom:25px;
+
+    border-radius:18px;
+
+    background:rgba(15,23,42,.88);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+.nav-left{
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+}
+
+.nav-center{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#38bdf8;
+
+}
+
+.nav-right{
+
+    font-size:15px;
+
+    color:#d1d5db;
+
+}
+
+@media(max-width:900px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:10px;
+
+        text-align:center;
+
+    }
+
+}
