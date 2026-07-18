@@ -1,5 +1,5 @@
 import streamlit as st
-from utils.map import live_city_map
+#from utils.map import live_city_map
 
 from utils.config import (
     APP_NAME,
